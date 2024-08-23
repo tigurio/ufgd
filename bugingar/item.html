@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>
+        Bugingar - Alugou, trocou, doou!
+    </title>
+    <link rel="stylesheet" href="css/navbar.min.css">
+    <link rel="stylesheet" href="css/carousel.min.css">
+    <link rel="stylesheet" href="css/card.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!--  ADICIONAR BOOTSTRAPTOUR :: https://bootstraptour.com/api/  -->
+</head>
+
+
+<body>
+    <!-- [inicio] NAVIBAR -->
+
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo">
+            <h1 style="font-family: 'Maven Pro', sans-serif; font-weight:500">Bugingar
+                <!-- <small>Bugingou, trocou!</small> -->
+            </h1>
+    
+        </a>
+    
+        <form method="post" action="" class="input-group mx-4 col-sm-4">
+
+            <input type="search" name="searched" class="form-control" placeholder="Olá Fulano, o que está procurando?" aria-label="{{ current_user.username }},, o que está procurando?" aria-describedby="button-addon2">
+            
+            <!-- <input type="search" name="searched" class="form-control" placeholder="Olá visitante, o que está procurando?" aria-label="Olá visitante, o que está procurando?" aria-describedby="button-addon2"> -->
+            
+            <button class="btn btn-primary" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
+        </form>
+    
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="feed.html"><i class="fas fa-th-large"></i>Feed</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html"><i class="far fa-address-book"></i>Minha conta</a>
+                </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="homepage.html"><i class="fas fa-sign-in-alt"></i>Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="criarconta.html"><i class="fa fa-user-plus"></i>Criar conta</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="far fa-question-circle"></i>Dúvidas?</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.html"><i class="fas fa-sign-out-alt"></i>Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- [fim] NAVBAR -->
+    <main>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="banner col-md-12" style="text-align: center;"><img src="http://www.placehold.it/970x90" alt=""></div>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="card text-dark mb-4">
+                        <img src="image_items/pinterest-15.jpg"
+                             class="card-img"
+                             alt="Foto do item"
+                             title="Foto do item" />
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <span class="badge rounded-pill bg-success bg-gradient text-center text-white p-2">
+                        <i class="fas fa-exchange-alt"></i>troca
+                    </span>
+
+                    <!-- <span class="badge rounded-pill bg-primary bg-gradient text-center text-white p-2">
+                        <i class="fas fa-hand-holding-heart"></i>doação
+                    </span>
+                    <span class="badge rounded-pill bg-danger bg-gradient text-center text-white p-2">
+                        <i class="far fa-money-bill-alt"></i>aluguel
+                    </span> -->
+                    
+                    
+
+                    <h2>Título do produto</h2>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <p class="card-text text-primary-emphasis text-capitalize text-end">
+                                <i class="fas fa-user-circle"></i><small>anunciante</small>
+                            </p>
+                        </div>
+                        <div class="col-md">
+                            <i class="fas fa-calendar-alt"></i><small>anunciado em 00/00/2024</small>
+                        </div>
+                    </div>
+                    
+                    
+                    <p class="mt-5">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis distinctio quia numquam tempore unde esse porro, doloribus delectus aut architecto, voluptatem deleniti qui vero. Quaerat possimus ab asperiores! Fugit, nulla?
+                    </p>
+
+                    <div class="alert alert-warning" role="alert">
+                        Não caia em golpes! Nunca transfira dinheiro ou se comunique fora do site Bugingar.
+                      </div>
+
+                </div>
+                <div class="col-xl-12">
+                    <h5>Localização do anunciante:</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.175015006841!2d-54.82290152477732!3d-22.233437479734764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9489a996b65e83e5%3A0x1b48ac7fe0b110ed!2sSupermercado%20Fortaleza%20loja%202!5e0!3m2!1spt-BR!2sbr!4v1689133484459!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h5>Outros da categoria:</h5>
+            <div class="row mt-4">
+                
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                   
+                    <div class="card text-dark mb-4">
+
+                        <a href="item.html">
+                            <img src="image_items/impressora1.jpg" class="card-img" alt="...">
+                        </a>
+                        <div class="card-img-overlay">
+                            
+                            <span class="badge rounded-pill bg-success bg-gradient text-center text-white p-2">
+                                <i class="fas fa-exchange-alt"></i>troca
+                            </span>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>00/00/2024</small></p>
+                            <p class="card-text"><b><a href="item.html">Título do produto</a></b></p>
+                            <p class="card-text text-primary-emphasis text-capitalize">
+                                <i class="fas fa-user-circle"></i><small>Anunciante</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                   
+                    <div class="card text-dark mb-4">
+
+                        <a href="item.html">
+                            <img src="image_items/estampa.jpg" class="card-img" alt="...">
+                        </a>
+                        <div class="card-img-overlay">                          
+                            <span class="badge rounded-pill bg-primary bg-gradient text-center text-white p-2">
+                                <i class="fas fa-hand-holding-heart"></i>doação
+                            </span>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>00/00/2024</small></p>
+                            <p class="card-text"><b>Título do produto</b></p>
+                            <p class="card-text text-primary-emphasis text-capitalize">
+                                <i class="fas fa-user-circle"></i><small>Anunciante</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                   
+                    <div class="card text-dark mb-4">
+
+                        <a href="item.html">
+                            <img src="image_items/impressora.jpg" class="card-img" alt="...">
+                        </a>
+                        <div class="card-img-overlay">                            
+                            <span class="badge rounded-pill bg-danger bg-gradient text-center text-white p-2">
+                                <i class="far fa-money-bill-alt"></i>venda
+                            </span>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>00/00/2024</small></p>
+                            <p class="card-text"><b>Título do produto</b></p>
+                            <p class="card-text text-primary-emphasis text-capitalize">
+                                <i class="fas fa-user-circle"></i><small>Anunciante</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                   
+                    <div class="card text-dark mb-4">
+
+                        <a href="item.html">
+                            <img src="image_items/jogo.jpg" class="card-img" alt="...">
+                        </a>
+                        <div class="card-img-overlay">
+                            
+                            <span class="badge rounded-pill bg-success bg-gradient text-center text-white p-2">
+                                <i class="fas fa-exchange-alt"></i>troca
+                            </span>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>00/00/2024</small></p>
+                            <p class="card-text"><b>Título do produto</b></p>
+                            <p class="card-text text-primary-emphasis text-capitalize">
+                                <i class="fas fa-user-circle"></i><small>Anunciante</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    <footer class="py-5" style="background-color: #5161ce;">
+        rodape
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="js/navbar.dev.js"></script>
+    <script src="js/app.dev.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+</body>
+    

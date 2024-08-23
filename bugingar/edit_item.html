@@ -1,0 +1,122 @@
+{% extends "homepage.html" %}
+
+{% block titulo %}
+    {{ item.titulo }} - Bugingar.com
+{% endblock %}
+
+{% block body %}
+<body>
+    {% include "navbar.html" %}
+    <main>
+
+        <div class="container my-5">
+
+            <div class="row">
+                <div class="banner col-md-12" style="text-align: center;"><img src="http://www.placehold.it/970x90" alt=""></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form action="/item/u/{{ item.id }}" method="POST" enctype="multipart/form-data" class="col-md-12 p-3">
+                    <div class="row">
+
+                        <div class="col-xl-6 col-md-6">
+                            <div class="card text-dark mb-4">
+                                <img src="{{ url_for('static', filename='image_items/{}'.format(item.imagem)) }}"
+                                    class="card-img"
+                                    alt="Foto do item {{ item.titulo }}"
+                                    title="Foto do item {{ item.titulo }}" />
+                                <input type="file" name="imagem" class="form-control", id="formFileMultiple">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">       
+    
+                            <fieldset class="mb-2">
+                                <legend>Título do anúncio</legend>
+                                <input type="text" name="titulo" id="" class="form-control form-control-lg" value="{{ item.titulo }}">
+                            </fieldset>
+    
+                            
+                                                       
+                            <fieldset class="mb-2">
+                                <legend>Descrição do anúncio: </legend>
+                                <textarea name="descricao" id="" class="form-control form-control-lg" cols="30" rows="10">{{ item.descricao }}</textarea> 
+                            </fieldset> 
+
+                            
+                    
+                            <div class="form-check form-check-inline">
+                                <fieldset class="mb-2">
+                                    <legend>Tipo de negociação</legend>
+                                    {% if item.tipo_negociacao == 'TROCA': %}
+                                    <input type="radio" class="form-check-input" checked name="tipo_negociacao" value="TROCA">
+                                    {% else %}
+                                    <input type="radio" class="form-check-input" name="tipo_negociacao" value="TROCA">
+                                    {% endif %} 
+                                    <span class="badge rounded-pill bg-success bg-gradient text-center text-white p-2">
+                                        <i class="fas fa-exchange-alt"></i>TROCA
+                                    </span>                            
+    
+                                    {% if item.tipo_negociacao == 'DOAÇÂO': %}
+                                    <input type="radio" class="form-check-input" checked name="tipo_negociacao" value="DOAÇÂO">
+                                    {% else %}
+                                    <input type="radio" class="form-check-input" name="tipo_negociacao" value="DOAÇÂO">
+                                    {% endif %} 
+                                    <span class="badge rounded-pill bg-primary bg-gradient text-center text-white p-2">
+                                        <i class="fas fa-hand-holding-heart"></i>DOAÇÃO
+                                    </span>
+    
+                                    {% if item.tipo_negociacao == 'ALUGUEL': %}
+                                    <input type="radio" class="form-check-input" checked name="tipo_negociacao" value="ALUGUEL">
+                                    {% else %}
+                                    <input type="radio" class="form-check-input" name="tipo_negociacao" value="ALUGUEL">
+                                    {% endif %} 
+                                    <span class="badge rounded-pill bg-danger bg-gradient text-center text-white p-2">
+                                        <i class="far fa-money-bill-alt"></i>ALUGUEL
+                                    </span>
+                                </fieldset>
+
+
+                            </div>
+                            <fieldset class="mb-2">
+                                <legend><label for="status">Status do anúncio:</label></legend>
+                                <select class="form-control" id="status" name="status" required>
+                                    {% if item.status == 0: %}
+                                    <option value="0" selected>Ativo</option>
+                                    <option value="1">Inativo</option>
+                                    {% else %}
+                                    <option value="0" >Ativo</option>
+                                    <option value="1" selected>Inativo</option>
+                                    {% endif %}
+                                </select>
+                            </fieldset>
+                            <fieldset class="mb-2">{{ item.data_criacao }}</fieldset>
+    
+                        </div>
+                        <div class="col-xl-12">
+                            <h5>Localização do anunciante:</h5>
+                            <!-- <input type="text" name="" id=""> -->
+                        </div>
+    
+    
+                        <button type="submit" class="btn btn-outline-alert">Atualizar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="{{url_for('static', filename='/js/navbar.dev.js')}}"></script>
+    <script src="{{url_for('static', filename='/js/app.dev.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+
+
+
+</body>
+{% endblock %}

@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+    <a class="navbar-brand navbar-logo">
+        <h1 style="font-family: 'Maven Pro', sans-serif; font-weight:500">Bugingar
+            <!-- <small>Bugingou, trocou!</small> -->
+        </h1>
+
+    </a>
+
+    <form method="post" action="{{ url_for('search') }}" class="input-group mx-4 col-sm-6">
+        {{ form.hidden_tag() }}
+        {% if current_user.is_authenticated %}
+        <input type="search" name="searched" class="form-control" placeholder="{{ current_user.username }}, o que está procurando?" aria-label="{{ current_user.username }},, o que está procurando?" aria-describedby="button-addon2">
+        {% else %}
+        <input type="search" name="searched" class="form-control" placeholder="Olá visitante, o que está procurando?" aria-label="Olá visitante, o que está procurando?" aria-describedby="button-addon2">
+        {% endif %}
+        <button class="btn btn-primary" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
+    </form>
+
+    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <div class="hori-selector">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('feed') }}"><i class="fas fa-th-large"></i>Feed</a>
+            </li>
+            {% if current_user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('profile', user=current_user.username)}}"><i class="far fa-address-book"></i>Minha conta</a>
+            </li>
+            {% endif %}
+            {% if current_user.is_anonymous %}
+             <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('homepage') }}"><i class="fas fa-sign-in-alt"></i>Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('criarconta') }}"><i class="fa fa-user-plus"></i>Criar conta</a>
+            </li>
+            {% endif %}
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="far fa-question-circle"></i>Dúvidas?</a>
+            </li>
+
+            {% if current_user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Sair</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
